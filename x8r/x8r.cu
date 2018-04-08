@@ -233,63 +233,63 @@ extern "C" void x8r_hash(void *output, const void *input)
 		size = 64;
 	}
 
-	if(cnt < 34) {
+	if(count < 34) {
         sph_hamsi512_init(&ctx_hamsi);
         sph_hamsi512 (&ctx_hamsi, in, size);
         sph_hamsi512_close(&ctx_hamsi, hash);
-    }else if(cnt < 46){
+    }else if(count < 46){
         sph_groestl512_init(&ctx_groestl);
         sph_groestl512 (&ctx_groestl, in, size);
         sph_groestl512_close(&ctx_groestl, hash);
-    }else if(cnt < 54){
+    }else if(count < 54){
         sph_fugue512_init(&ctx_fugue);
         sph_fugue512 (&ctx_fugue, in, size);
         sph_fugue512_close(&ctx_fugue, hash);
-    }else if(cnt < 61){
+    }else if(count < 61){
         sph_simd512_init(&ctx_simd);
         sph_simd512 (&ctx_simd, in, size);
         sph_simd512_close(&ctx_simd, hash);
-    }else if(cnt < 68){
+    }else if(count < 68){
         sph_echo512_init(&ctx_echo);
         sph_echo512 (&ctx_echo, in, size);
         sph_echo512_close(&ctx_echo, hash);
-    }else if(cnt < 73){
+    }else if(count < 73){
         sph_luffa512_init(&ctx_luffa);
         sph_luffa512 (&ctx_luffa, in, size);
         sph_luffa512_close(&ctx_luffa, hash);
-    }else if(cnt < 78){
+    }else if(count < 78){
         sph_jh512_init(&ctx_jh);
         sph_jh512 (&ctx_jh, in, size);
         sph_jh512_close(&ctx_jh, hash);
-    }else if(cnt < 83){
+    }else if(count < 83){
         sph_cubehash512_init(&ctx_cubehash);
         sph_cubehash512 (&ctx_cubehash, in, size);
         sph_cubehash512_close(&ctx_cubehash, hash);
-    }else if(cnt < 88){
+    }else if(count < 88){
         sph_whirlpool_init(&ctx_whirlpool);
         sph_whirlpool(&ctx_whirlpool, in, size);
         sph_whirlpool_close(&ctx_whirlpool, hash);
-    }else if(cnt < 93){
+    }else if(count < 93){
         sph_shavite512_init(&ctx_shavite);
         sph_shavite512(&ctx_shavite, in, size);
         sph_shavite512_close(&ctx_shavite, hash);
-    }else if(cnt < 97){
+    }else if(count < 97){
         sph_keccak512_init(&ctx_keccak);
         sph_keccak512 (&ctx_keccak, in, size);
         sph_keccak512_close(&ctx_keccak, hash);
-    }else if(cnt < 101){
+    }else if(count < 101){
         sph_shabal512_init(&ctx_shabal);
         sph_shabal512 (&ctx_shabal, in, size);
         sph_shabal512_close(&ctx_shabal, hash);
-    }else if(cnt < 104){
+    }else if(count < 104){
         sph_sha512_init(&ctx_sha512);
         sph_sha512 (&ctx_sha512, (const void*)in, size);
         sph_sha512_close(&ctx_sha512, (void*)hash);
-    }else if(cnt < 107){
+    }else if(count < 107){
         sph_blake512_init(&ctx_blake);
         sph_blake512 (&ctx_blake, in, size);
         sph_blake512_close(&ctx_blake, hash);
-    }else if(cnt < 110){
+    }else if(count < 110){
         sph_bmw512_init(&ctx_bmw);
         sph_bmw512 (&ctx_bmw, in, size);
         sph_bmw512_close(&ctx_bmw, hash);
