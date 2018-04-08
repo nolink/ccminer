@@ -2328,6 +2328,9 @@ void print_hash_tests(void)
 	x16r_hash(&hash[0], &buf[0]);
 	printpfx("X16r", hash);
 
+	x8r_hash(&hash[0], &buf[0]);
+	printpfx("X8r", hash);
+
 	x17hash(&hash[0], &buf[0]);
 	printpfx("X17", hash);
 
